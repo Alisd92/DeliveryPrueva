@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Hevia - García de Hevia</title>
+    <style>
+        /* ESTILOS CSS (VINOTINTO + DORADO) */
+        :root {
+            --vinotinto: #7F1737;
+            --dorado: #F1C40F;
+            --blanco: #FFFFFF;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            background-color: var(--vinotinto);
+            color: var(--blanco);
+        }
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: var(--vinotinto);
+            border-bottom: 3px solid var(--dorado);
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--dorado);
+        }
+        .boton {
+            background-color: var(--dorado);
+            color: var(--vinotinto);
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .negocio {
+            background-color: var(--blanco);
+            color: var(--vinotinto);
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">DELIVERY HEVIA</div>
+        <p>¡Pedidos rápidos en García de Hevia!</p>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <main style="padding: 20px;">
+        <!-- BUSCADOR -->
+        <div style="text-align: center;">
+            <input type="text" placeholder="🔍 Buscar 'arepa'" style="padding: 10px; width: 80%;">
+        </div>
+
+        <!-- NEGOCIOS DESTACADOS -->
+        <h2 style="text-align: center;">Negocios Destacados</h2>
+        <div class="negocio">
+            <h3>Panadería María</h3>
+            <p>Arepas: Bs. 3 | Café: Bs. 2</p>
+            <button class="boton">Ver Menú</button>
+        </div>
+
+        <!-- BOTÓN WHATSAPP -->
+        <div style="text-align: center; margin-top: 30px;">
+            <button class="boton" onclick="window.open('https://wa.me/584123456789?text=Quiero%20hacer%20un%20pedido')">
+                📱 Pedir por WhatsApp
+            </button>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; padding: 20px; margin-top: 30px; border-top: 1px solid var(--dorado);">
+        <p>📍 García de Hevia, Táchira, Venezuela</p>
+        <p>© 2024 Delivery Hevia</p>
+    </footer>
+
+    <!-- ALGORITMO BÁSICO PARA PEDIDOS (JS) -->
+    <script>
+        // Ejemplo: Guardar pedido en localStorage
+        function hacerPedido(producto, precio) {
+            const pedido = { producto, precio, fecha: new Date() };
+            localStorage.setItem('ultimoPedido', JSON.stringify(pedido));
+            alert(`Pedido agregado: ${producto} - Bs. ${precio}`);
+        }
+    </script>
+</body>
+</html>
